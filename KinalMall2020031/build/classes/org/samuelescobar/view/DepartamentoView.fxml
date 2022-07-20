@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="875.0" style="-fx-background-color: #e2f8f5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.samuelescobar.controller.DepartamentoController">
+   <children>
+      <Pane prefHeight="416.0" prefWidth="232.0" style="-fx-background-color: #039399;">
+         <children>
+            <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" layoutX="9.0" layoutY="162.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="55.0" prefWidth="214.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Nuevo">
+               <graphic>
+                  <ImageView fx:id="imgNuevo" fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Nuevo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SimSun" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" layoutX="9.0" layoutY="223.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="55.0" prefWidth="214.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Eliminar">
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="38.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SimSun" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" alignment="BASELINE_LEFT" layoutX="9.0" layoutY="285.0" mnemonicParsing="false" onAction="#editar" prefHeight="55.0" prefWidth="214.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Editar">
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="36.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Editar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SimSun" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReporte" alignment="BASELINE_LEFT" layoutX="9.0" layoutY="347.0" mnemonicParsing="false" onAction="#reporte" prefHeight="55.0" prefWidth="214.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Reporte">
+               <graphic>
+                  <ImageView fx:id="imgReporte" fitHeight="38.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Reporte.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SimSun" size="25.0" />
+               </font>
+            </Button>
+            <Pane layoutX="34.0" prefHeight="141.0" prefWidth="165.0" style="-fx-background-color: #98f7cf; -fx-background-radius: 0 0 10 10;">
+               <children>
+                  <ImageView fitHeight="131.0" fitWidth="165.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo%20Departamentos.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="232.0" prefHeight="56.0" prefWidth="646.0" style="-fx-background-color: #EF7676;">
+         <children>
+            <Label layoutX="157.0" layoutY="2.0" text="Departamentos" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua" size="43.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="42.0" fitWidth="41.0" layoutX="572.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Casita.png" />
+               </image>
+            </ImageView>
+            <Label alignment="BOTTOM_CENTER" layoutX="564.0" layoutY="31.0" prefHeight="22.0" prefWidth="58.0" text="Principal" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <GridPane layoutX="242.0" layoutY="96.0" prefHeight="32.0" prefWidth="625.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.0" minWidth="10.0" prefWidth="199.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.0" minWidth="10.0" prefWidth="203.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="140.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código Departamento">
+               <font>
+                  <Font name="SimSun" size="21.0" />
+               </font>
+            </Label>
+            <Label text="Nombre Departamento" GridPane.columnIndex="2">
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+               <font>
+                  <Font name="SimSun" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoDepartamento" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNombreDepartamento" editable="false" prefHeight="25.0" prefWidth="194.0" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblDepartamento" layoutX="246.0" layoutY="144.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="264.0" prefWidth="618.0" stylesheets="@../resource/KinalMallCSS.css">
+        <columns>
+          <TableColumn fx:id="colCodigoDepartamento" prefWidth="209.0" text="Código Departamento" />
+          <TableColumn fx:id="colNombreDepartamento" prefWidth="408.0" text="Nombre Departamento" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

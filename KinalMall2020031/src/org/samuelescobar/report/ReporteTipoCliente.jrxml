@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteTipoCliente" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b5ad70e2-e4f8-47d2-b34d-bea1e2bb8878">
+	<property name="ireport.zoom" value="0.9090909090909091"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codTC" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from TipoCliente where codigoTipoCliente= $P{codTC}]]>
+	</queryString>
+	<field name="codigoTipoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="555" height="465" uuid="280bc80b-eca2-4994-b4b1-4b039ea67793"/>
+				<imageExpression><![CDATA["C:\\Users\\samie\\Desktop\\Fondo reporte.jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="560" width="555" height="242" uuid="3814914d-954b-4aa1-a696-21a333f090f0"/>
+				<imageExpression><![CDATA["C:\\Users\\samie\\Desktop\\Fondo reporte 2.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="55" y="19" width="79" height="60" uuid="8ae446f3-ff6d-4672-aa83-c500942c381e"/>
+				<imageExpression><![CDATA["C:\\Users\\samie\\Pictures\\TALLER PRUEBAS\\OTRO\\Samuel Escobar 2020031 IN5AV Laboratorio #3\\KinalMall2020031\\src\\org\\samuelescobar\\images\\Logo kinal.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="134" y="41" width="100" height="20" uuid="8f29e901-9b85-4d5e-b65b-63ae4a3295b0"/>
+				<text><![CDATA[codigoTipoCliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="336" y="41" width="100" height="20" uuid="7b86d40f-7d78-48bd-b4f2-04903d34e296"/>
+				<text><![CDATA[descripcion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="134" y="0" width="100" height="20" uuid="1a9f48cb-e80d-4f13-9741-6925e7cda64e"/>
+				<textFieldExpression><![CDATA[$F{codigoTipoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="2" width="100" height="20" uuid="d0d808eb-6183-442a-ba67-2b0f7d6176e1"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

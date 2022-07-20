@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.samuelescobar.controller.TipoClienteController">
+   <children>
+      <Pane prefHeight="435.0" prefWidth="232.0" style="-fx-background-color: #039399;">
+         <children>
+            <Pane layoutX="37.0" prefHeight="150.0" prefWidth="158.0" style="-fx-background-color: #98f7cf; -fx-background-radius: 0 0 10 10;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="158.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo%20Tipo%20Cliente.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" layoutX="6.0" layoutY="181.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="52.0" prefWidth="219.0" styleClass="button2" stylesheets="@../resource/KinalMallCSS.css" text="Nuevo">
+               <font>
+                  <Font name="SimSun" size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgNuevo" fitHeight="38.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Nuevo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEditar" alignment="BASELINE_LEFT" layoutX="5.0" layoutY="307.0" mnemonicParsing="false" onAction="#editar" prefHeight="52.0" prefWidth="219.0" styleClass="button2" stylesheets="@../resource/KinalMallCSS.css" text="Editar">
+               <font>
+                  <Font name="SimSun" size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="38.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Editar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReporte" alignment="BASELINE_LEFT" layoutX="6.0" layoutY="368.0" mnemonicParsing="false" onAction="#reporte" prefHeight="52.0" prefWidth="219.0" styleClass="button2" stylesheets="@../resource/KinalMallCSS.css" text="Reporte">
+               <font>
+                  <Font name="SimSun" size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgReporte" fitHeight="38.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Reporte.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" layoutX="5.0" layoutY="246.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="52.0" prefWidth="219.0" styleClass="button2" stylesheets="@../resource/KinalMallCSS.css" text="Eliminar">
+               <font>
+                  <Font name="SimSun" size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="38.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="232.0" prefHeight="56.0" prefWidth="602.0" style="-fx-background-color: #EF7676;">
+         <children>
+            <Label layoutX="158.0" layoutY="5.0" text="Tipo Clientes" textFill="WHITE">
+               <font>
+                  <Font name="SimSun" size="44.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="46.0" fitWidth="40.0" layoutX="487.0" layoutY="2.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Casita.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="547.0" layoutY="6.0" onMouseClicked="#ventanaCliente" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Logo%20Cliente.png" />
+               </image>
+            </ImageView>
+            <Label alignment="BOTTOM_CENTER" layoutX="531.0" layoutY="31.0" prefHeight="22.0" prefWidth="71.0" text="Clientes" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_CENTER" layoutX="471.0" layoutY="31.0" prefHeight="22.0" prefWidth="71.0" text="Principal" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <GridPane layoutX="242.0" layoutY="96.0" prefHeight="38.0" prefWidth="583.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="199.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="77.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="122.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="183.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="22.0" prefWidth="215.0" text="Código Tipo Cliente">
+               <font>
+                  <Font name="SimSun" size="21.0" />
+               </font>
+            </Label>
+            <Label text="Descripción" GridPane.columnIndex="2">
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+               <font>
+                  <Font name="SimSun" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoTipoCliente" editable="false" prefHeight="25.0" prefWidth="71.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtDescripcion" editable="false" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblTipoCliente" layoutX="290.0" layoutY="169.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="234.0" prefWidth="487.0" stylesheets="@../resource/KinalMallCSS.css">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoCliente" prefWidth="142.0" text="Código Tipo Cliente" />
+          <TableColumn fx:id="colDescripcion" prefWidth="367.0" text="Descripción" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

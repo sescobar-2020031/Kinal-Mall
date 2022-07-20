@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="1219.0" style="-fx-background-color: #e2f8f5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.samuelescobar.controller.ClienteController">
+   <children>
+      <Pane prefHeight="438.0" prefWidth="232.0" style="-fx-background-color: #039399;">
+         <children>
+            <Pane layoutX="37.0" prefHeight="150.0" prefWidth="158.0" style="-fx-background-color: #98f7cf; -fx-background-radius: 0 0 10 10;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="152.0" layoutX="3.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo%20Cliente.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" layoutX="14.0" layoutY="175.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="51.0" prefWidth="206.0" styleClass="button2" stylesheets="@../resource/KinalMallCSS.css" text="Nuevo">
+               <graphic>
+                  <ImageView fx:id="imgNuevo" fitHeight="41.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Nuevo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SimSun" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" layoutX="14.0" layoutY="240.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="51.0" prefWidth="206.0" styleClass="button2" stylesheets="@../resource/KinalMallCSS.css" text="Eliminar">
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="43.0" fitWidth="51.0" onMouseClicked="#eliminar" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SimSun" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" alignment="BASELINE_LEFT" layoutX="14.0" layoutY="307.0" mnemonicParsing="false" onAction="#editar" prefHeight="51.0" prefWidth="206.0" styleClass="button2" stylesheets="@../resource/KinalMallCSS.css" text="Editar">
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="43.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Editar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SimSun" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReporte" alignment="BASELINE_LEFT" layoutX="14.0" layoutY="375.0" mnemonicParsing="false" onAction="#reporte" prefHeight="51.0" prefWidth="206.0" styleClass="button2" stylesheets="@../resource/KinalMallCSS.css" text="Reporte">
+               <graphic>
+                  <ImageView fx:id="imgReporte" fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Reporte.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SimSun" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="232.0" prefHeight="58.0" prefWidth="997.0" style="-fx-background-color: #EF7676;">
+         <children>
+            <Label layoutX="411.0" layoutY="6.0" text="Clientes" textFill="WHITE">
+               <font>
+                  <Font name="SimSun" size="44.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="46.0" fitWidth="43.0" layoutX="840.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Casita.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="36.0" layoutX="929.0" layoutY="3.0" onMouseClicked="#ventanaTipoCliente" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Logo%20Tipo%20Cliente.png" />
+               </image>
+            </ImageView>
+            <Label alignment="BOTTOM_CENTER" layoutX="831.0" layoutY="36.0" prefHeight="21.0" prefWidth="61.0" text="Principal" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_CENTER" layoutX="906.0" layoutY="36.0" prefHeight="21.0" prefWidth="83.0" text="Tipo Clientes" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <GridPane layoutX="239.0" layoutY="70.0" prefHeight="90.0" prefWidth="958.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="167.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="105.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="148.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.0" minWidth="10.0" prefWidth="172.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="195.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.0" minWidth="10.0" prefWidth="172.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código Cliente">
+               <font>
+                  <Font name="SimSun" size="19.0" />
+               </font>
+            </Label>
+            <Label text="Telefono Cliente" GridPane.rowIndex="1">
+               <font>
+                  <Font name="SimSun" size="19.0" />
+               </font>
+            </Label>
+            <Label text="Código Local" GridPane.rowIndex="2">
+               <font>
+                  <Font name="SimSun" size="19.0" />
+               </font>
+            </Label>
+            <Label text="Nombres Cliente" GridPane.columnIndex="2">
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+               <font>
+                  <Font name="SimSun" size="19.0" />
+               </font>
+            </Label>
+            <Label text="Dirección" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+               <font>
+                  <Font name="SimSun" size="19.0" />
+               </font>
+            </Label>
+            <Label text="Código Admin" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+               <font>
+                  <Font name="SimSun" size="19.0" />
+               </font>
+            </Label>
+            <Label text="Apellidos Cliente" GridPane.columnIndex="4">
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+               <font>
+                  <Font name="SimSun" size="19.0" />
+               </font>
+            </Label>
+            <Label text="Email" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+               <font>
+                  <Font name="SimSun" size="19.0" />
+               </font>
+            </Label>
+            <Label text="Código Tipo Cliente" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="3.0" />
+               </padding>
+               <font>
+                  <Font name="SimSun" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoCliente" editable="false" GridPane.columnIndex="1">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtTelefonoCliente" editable="false" prefHeight="25.0" prefWidth="69.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtNombreCliente" editable="false" GridPane.columnIndex="3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtDireccionCliente" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtApellidoCliente" editable="false" GridPane.columnIndex="5">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtEmail" editable="false" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="cmbCodigoLocal" prefHeight="25.0" prefWidth="164.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cmbCodigoAdministracion" prefHeight="25.0" prefWidth="177.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cmbCodigoTipoCliente" prefHeight="18.0" prefWidth="175.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblCliente" layoutX="245.0" layoutY="176.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="252.0" prefWidth="958.0" stylesheets="@../resource/KinalMallCSS.css">
+        <columns>
+          <TableColumn fx:id="colCodigoCliente" prefWidth="74.0" text="Cod. Cliente" />
+          <TableColumn fx:id="colNombreCliente" prefWidth="135.0" text="Nombres Cliente" />
+            <TableColumn fx:id="colApellidoCliente" prefWidth="110.0" text="Apellidos Cliente" />
+            <TableColumn fx:id="colTelefonoCliente" prefWidth="102.0" text="Tel. Cliente" />
+            <TableColumn fx:id="colDireccionCliente" prefWidth="158.0" text="Dirección" />
+            <TableColumn fx:id="colEmail" prefWidth="140.0" text="Email" />
+            <TableColumn fx:id="colCodigoLocal" prefWidth="65.0" text="Cod. Local" />
+            <TableColumn fx:id="colCodigoAdministracion" prefWidth="71.0" text="Cod. Admin" />
+            <TableColumn fx:id="colCodigoTipoCliente" prefWidth="102.0" text="Cod. Tipo Cliente" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

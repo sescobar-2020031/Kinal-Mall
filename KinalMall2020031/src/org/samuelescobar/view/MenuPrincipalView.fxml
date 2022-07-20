@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.samuelescobar.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="442.0" fitWidth="663.0" layoutX="-39.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Fondo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="376.0" fitWidth="363.0" layoutX="117.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Logo%20kinal.png" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="-8.0" prefHeight="44.0" prefWidth="609.0" stylesheets="@../resource/KinalMallCSS.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaDepartamento" text="Departamentos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCargo" text="Cargos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaHorario" text="Horarios" />
+              <MenuItem mnemonicParsing="false" onAction="#ventanaAdministracion" text="Adminitración" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventaTipoCliente" text="Tipo de Clientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaLocal" text="Locales" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProveedor" text="Proveedores" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="69.0" fitWidth="332.0" layoutX="133.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Kinal%20Mall%20Letras.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="332.0" layoutX="139.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Slogan.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
